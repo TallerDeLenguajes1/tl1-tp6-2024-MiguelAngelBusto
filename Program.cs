@@ -1,27 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-Console.WriteLine("Ingrese un numero: ");
-string x = Console.ReadLine();
-int numero;
-int.TryParse(x, out numero);
-if (numero > 10)
-{
-    int aux = 0;
-    int reto;
-    do
-    {
-        reto = numero % 10;
-        numero = numero / 10;
-        aux = aux + reto;
-        if (numero > 0)
-        {
-            aux = aux * 10;
-        }
-    } while (numero > 0);
-    Console.WriteLine("El numero invertido es: " + aux);
-}
-else
-{
-    Console.WriteLine("El numero invertido es: " + numero);
+
+int x = Menu();
+swi
+
+function int Menu (){
+    Console.WriteLine("Ingrese que operacion desea realizar:\n1)Calcular Valor Absoluto\n2)El cuadrado\n3)Raiz Cuadrada\n4)Seno\n5)Coseno\n6)Parte entera de un numero");
+    Console.WriteLine("Ingrese su opcion: ");
+    string x = Console.ReadLine();
+    int numero;
+    int.TryParse(x, out numero);
+    return numero;
 }
